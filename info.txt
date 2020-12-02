@@ -1,0 +1,15 @@
+PACKAGES:
+_browser-sync
+_del
+_gulp
+_gulp-autoprefixer
+_gulp-concat
+_gulp-imagemin
+_gulp-sass
+_gulp-uglify-es
+
+
+/...................................................../
+COMMANDS:
+gulp -- launches: (styles, scripts, browsersync, watching);
+gulp build -- to assemble a project (cleanDist, images, build);
