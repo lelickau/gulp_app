@@ -37,11 +37,11 @@ function images(){
 
 function scripts(){
     return src([
-        'node_modules/jquery/dist/jquery.js',
+        //'node_modules/jquery/dist/jquery.js',
         'app/js/main.js'
     ])
     .pipe(concat("main.min.js"))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 
