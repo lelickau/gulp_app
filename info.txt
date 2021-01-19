@@ -7,9 +7,14 @@ _gulp-concat
 _gulp-imagemin
 _gulp-sass
 _gulp-uglify-es
+_stylelint-config-standard
+_stylelint-config-recess-order
+_stylelint
+_gulp-stylelint
 
 
 /...................................................../
 COMMANDS:
 gulp -- launches: (styles, scripts, browsersync, watching);
 gulp build -- to assemble a project (cleanDist, images, build);
+gulp lint
