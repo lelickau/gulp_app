@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const gulpStylelint = require('gulp-stylelint');
 
 function browsersync() {
     browserSync.init({
@@ -59,6 +60,19 @@ function styles(){
         .pipe(browserSync.stream())
 }
 
+// 
+function lint() {
+
+    return src('app/scss/**/*.scss')
+        .pipe(gulpStylelint({
+            reporters: [{
+                formatter: 'string',
+                console: true
+            }]
+        }));
+}
+// 
+
 function build() {
     return src([
         'app/css/style.min.css',
@@ -76,6 +90,7 @@ function watching() {
 }
 
 exports.styles = styles;
+exports.lint = lint;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
